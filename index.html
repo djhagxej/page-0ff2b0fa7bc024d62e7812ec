@@ -1,0 +1,256 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>极影加速 - 轻巧随行的网络中继日常记录与配置方案</title><meta name="description" content="极影加速陪你整理每日网络分流与订阅指引。这里有通俗易懂的各平台配置小贴士、清晰的规格对比以及我们在日常使用中积攒下的实用心得。"><meta name="keywords" content="极影加速, 极影加速套餐, 网络中继, 订阅配置, 客户端指南"><meta name="robots" content="index,follow"><link rel="canonical" href="https://p-13aa798ea5.guiyangai.cn/"><meta property="og:type" content="website"><meta property="og:title" content="极影加速 - 轻巧随行的网络中继日常记录与配置方案"><meta property="og:description" content="极影加速陪你整理每日网络分流与订阅指引。这里有通俗易懂的各平台配置小贴士、清晰的规格对比以及我们在日常使用中积攒下的实用心得。"><meta property="og:url" content="https://p-13aa798ea5.guiyangai.cn/"><meta property="og:site_name" content="极影加速"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://p-13aa798ea5.guiyangai.cn/", "name": "极影加速 - 轻巧随行的网络中继日常记录与配置方案", "description": "极影加速陪你整理每日网络分流与订阅指引。这里有通俗易懂的各平台配置小贴士、清晰的规格对比以及我们在日常使用中积攒下的实用心得。", "inLanguage": "zh-CN"}</script><meta name="publisher-task" content="0ff2b0fa7bc024d62e7812ec:276c9e630b7fbf66302489aeb399d9592d955edf2ef83d37b18f977e8b2bb4b3:60d9ff65786ff275af4e"></head><body id="top"><style>
+    * {box-sizing: border-box;margin: 0;padding: 0}
+    :root {--bg: #ffffff;--text: #111111;--orange: #ff5500;--gray-light: #f7f7f7;--border-thick: 3px solid #111111;--border-thin: 1px solid #111111}
+    body {background-color: var(--bg);color: var(--text);font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;line-height: 1.6;display: flex;min-height: 100vh}
+    nav.side-nav {width: 220px;flex-shrink: 0;border-right: var(--border-thick);position: sticky;top: 0;height: 100vh;display: flex;flex-direction: column;justify-content: space-between;padding: 40px 24px;background: #ffffff;z-index: 10}
+    nav.side-nav .nav-brand {font-size: 20px;font-weight: 900;letter-spacing: -1px;display: inline-block;border-bottom: 4px solid var(--orange);padding-bottom: 4px;text-decoration: none;color: var(--text)}
+    nav.side-nav ul {list-style: none;display: flex;flex-direction: column;gap: 18px}
+    nav.side-nav a.nav-link {color: var(--text);text-decoration: none;font-weight: 700;font-size: 15px;display: block;transition: color 0.1s}
+    nav.side-nav a.nav-link:hover {color: var(--orange)}
+    nav.side-nav .nav-foot {font-size: 12px;color: #666666;line-height: 1.4}
+    main {flex: 1;min-width: 0;display: flex;flex-direction: column}
+    .poster-hero {border-bottom: var(--border-thick);padding: 60px 48px 48px;background: var(--bg)}
+    .poster-tag {display: inline-block;background: var(--orange);color: #ffffff;font-weight: 800;font-size: 13px;padding: 4px 10px;margin-bottom: 24px;text-transform: uppercase;letter-spacing: 1px}
+    .poster-hero h1 {font-size: clamp(52px, 11vw, 150px);line-height: 0.95;font-weight: 900;letter-spacing: -0.04em;text-transform: uppercase;word-break: break-all;margin-bottom: 32px}
+    .poster-hero p.intro-lead {max-width: 760px;font-size: 20px;font-weight: 500;line-height: 1.6;border-left: 6px solid var(--orange);padding-left: 18px;margin-top: 20px}
+    section.content-block {padding: 64px 48px;border-bottom: var(--border-thick)}
+    .block-header {margin-bottom: 40px}
+    .block-header h2 {font-size: 36px;font-weight: 900;letter-spacing: -1px;display: inline-block;position: relative}
+    .block-header h2::after {content: "";position: absolute;left: 0;bottom: -6px;width: 100%;height: 4px;background: var(--orange)}
+    .block-header p {margin-top: 14px;font-size: 16px;color: #444444}
+    .card-grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));gap: 28px}
+    .stark-card {border: var(--border-thick);padding: 28px;background: #ffffff}
+    .stark-card h3 {font-size: 20px;font-weight: 800;margin-bottom: 12px;display: flex;align-items: center;gap: 8px}
+    .stark-card h3 .card-index {background: #111111;color: #ffffff;font-size: 12px;padding: 2px 7px}
+    .stark-card p {font-size: 15px;color: #333333;margin-bottom: 16px}
+    .stark-card a.action-link {display: inline-block;font-weight: 800;color: var(--orange);text-decoration: underline;text-underline-offset: 4px;font-size: 14px}
+    .table-container {overflow-x: auto;border: var(--border-thick);background: #ffffff}
+    table.plans-table {width: 100%;border-collapse: collapse;text-align: left;font-size: 15px}
+    table.plans-table th,
+    table.plans-table td {padding: 20px 24px;border-bottom: var(--border-thin);border-right: var(--border-thin);vertical-align: top}
+    table.plans-table th:last-child,
+    table.plans-table td:last-child {border-right: none}
+    table.plans-table tr:last-child td {border-bottom: none}
+    table.plans-table th {background: #fafafa;font-weight: 800;font-size: 16px}
+    table.plans-table th.highlight-col,
+    table.plans-table td.highlight-col {background: #fff8f5}
+    .plan-title {font-size: 22px;font-weight: 900;display: block;margin-bottom: 6px}
+    .badge-pop {display: inline-block;background: var(--orange);color: #ffffff;font-size: 11px;font-weight: 800;padding: 2px 6px;vertical-align: middle;margin-left: 6px}
+    .price-main {font-size: 24px;font-weight: 900;color: var(--orange)}
+    .price-sub {font-size: 13px;color: #666666;margin-top: 4px}
+    ul.feature-list {list-style: none;padding-left: 0}
+    ul.feature-list li {margin-bottom: 8px;font-size: 14px;display: flex;align-items: baseline;gap: 6px}
+    ul.feature-list li::before {content: "▪";color: var(--orange)}
+    .faq-columns {display: grid;grid-template-columns: 1fr 1fr;gap: 32px}
+    .faq-item {border: var(--border-thick);padding: 24px;background: #ffffff}
+    .faq-item h3 {font-size: 18px;font-weight: 800;margin-bottom: 12px;color: #111111;display: flex;align-items: flex-start;gap: 8px}
+    .faq-item h3 span {background: var(--orange);color: #ffffff;font-size: 12px;padding: 1px 6px;line-height: 1.4;flex-shrink: 0;margin-top: 2px}
+    .faq-item p {font-size: 15px;color: #444444;line-height: 1.6}
+    footer.site-foot {padding: 40px 48px;background: #111111;color: #ffffff;display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;gap: 20px}
+    footer.site-foot p {font-size: 13px;color: #aaaaaa}
+    @media (max-width: 900px) {
+      body {flex-direction: column}
+      nav.side-nav {width: 100%;height: auto;position: static;border-right: none;border-bottom: var(--border-thick);padding: 20px 24px}
+      nav.side-nav ul {flex-direction: row;flex-wrap: wrap;gap: 12px 18px;margin: 16px 0}
+      .poster-hero {padding: 40px 24px 32px}
+      section.content-block {padding: 40px 24px}
+      .faq-columns {grid-template-columns: 1fr;gap: 20px}
+      footer.site-foot {padding: 30px 24px}
+    }
+  </style><nav class="side-nav">
+    <div>
+      <a href="#" class="nav-brand">极影加速</a>
+      <ul>
+        <li><a class="nav-link" href="#hero">品牌速写</a></li>
+        <li><a class="nav-link" href="#guide">上手步骤</a></li>
+        <li><a class="nav-link" href="#plans">对比方案</a></li>
+        <li><a class="nav-link" href="#clients">软件建议</a></li>
+        <li><a class="nav-link" href="#faq">答疑解惑</a></li>
+      </ul>
+    </div>
+    <div class="nav-foot">
+      简单分流 · 随手查阅<br>
+      极影加速设计备忘
+    </div>
+  </nav>
+
+  <main>
+    <header class="poster-hero" id="hero">
+      <span class="poster-tag">NOTEBOOK &amp; SPECS</span>
+      <h1>极影加速</h1>
+      <p class="intro-lead">
+        嗨，欢迎来看看！这里是极影加速的内容板。平时我们自己在不同网络环境里折腾配置，常常碰到规则写错或者参数对不齐的烦恼，所以干脆把各规格特点、常用平台的接入流程和常见的小疑问全整理在这儿，希望也能帮到正在寻找合适方案的你。
+      </p>
+    </header>
+
+    <section class="content-block" id="guide">
+      <div class="block-header">
+        <h2>从零开始接入</h2>
+        <p>不用把网络调试想得太复杂，跟着这三步走，几分钟就能跑通。</p>
+      </div>
+      <div class="card-grid">
+        <article class="stark-card">
+          <h3><span class="card-index">01</span> 获取订阅链接</h3>
+          <p>进入你的个人中心，找到格式匹配的订阅文本。建议优先选择支持自动更新的通用格式，方便后续规则同步。</p>
+          <a class="action-link" href="#plans">查看备选方案规格 →</a>
+        </article>
+        <article class="stark-card">
+          <h3><span class="card-index">02</span> 导入客户端</h3>
+          <p>在你的日常设备上打开网络工具，新建配置并粘贴订阅地址。点击更新配置，等待几秒拉取完整的节点名录。</p>
+          <a class="action-link" href="#clients">支持的软件工具说明 →</a>
+        </article>
+        <article class="stark-card">
+          <h3><span class="card-index">03</span> 开启规则分流</h3>
+          <p>日常建议切换到“规则分流”或“绕过大陆”模式，这样本地日常访问不会绕路，只在需要查询海外资料时自动接入中转。</p>
+          <a class="action-link" href="#faq">分流疑问排查 →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-block" id="plans">
+      <div class="block-header">
+        <h2>方案对比对照表</h2>
+        <p>我们把目前几套常见档位横向铺开，每一档适合的使用强度一目了然。</p>
+      </div>
+
+      <div class="table-container">
+        <table class="plans-table">
+          <thead>
+            <tr>
+              <th>对照项目</th>
+              <th>基础版</th>
+              <th class="highlight-col">旗舰版 <span class="badge-pop">推荐</span></th>
+              <th>团队版</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>月付单价</th>
+              <td><span class="price-main">¥15</span> /月</td>
+              <td class="highlight-col"><span class="price-main">¥35</span> /月</td>
+              <td><span class="price-main">¥85</span> /月</td>
+            </tr>
+            <tr>
+              <th>按年优惠</th>
+              <td><div class="price-sub">按年付仅需 ¥150/年</div></td>
+              <td class="highlight-col"><div class="price-sub">按年付仅需 ¥350/年</div></td>
+              <td><div class="price-sub">按年付仅需 ¥850/年</div></td>
+            </tr>
+            <tr>
+              <th>可用流量</th>
+              <td>每月 100GB 极速流量</td>
+              <td class="highlight-col">每月 300GB 极速流量</td>
+              <td>每月 1000GB 极速流量</td>
+            </tr>
+            <tr>
+              <th>并发设备上限</th>
+              <td>3 台设备同时在线</td>
+              <td class="highlight-col">5 台设备同时在线</td>
+              <td>20 台设备同时在线</td>
+            </tr>
+            <tr>
+              <th>路由与线路特性</th>
+              <td>普通线路节点池</td>
+              <td class="highlight-col">IPLC 专线游戏加速优化</td>
+              <td>VIP 专属高带宽节点，支持企业定制路由</td>
+            </tr>
+            <tr>
+              <th>解锁支持</th>
+              <td>解锁基础流媒体</td>
+              <td class="highlight-col">全节点原生流媒体解锁</td>
+              <td>支持企业定制流媒体策略与全节点覆盖</td>
+            </tr>
+            <tr>
+              <th>支持服务</th>
+              <td>常规工单支持</td>
+              <td class="highlight-col">7x24 优先工单支持</td>
+              <td>专属客户经理服务</td>
+            </tr>
+            <tr>
+              <th>适合场景</th>
+              <td>轻量浏览网页、查阅邮件与偶看视频</td>
+              <td class="highlight-col">主力机全天候挂载、影音流媒体与跨区联机</td>
+              <td>工作室小组、多设备测试及高频带宽需求</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-block" id="clients">
+      <div class="block-header">
+        <h2>客户端应用建议</h2>
+        <p>极影加速遵循标准开放协议，你可以使用任何你习惯的核心与工具接入，无需绑定专属外壳。</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="stark-card">
+          <h3>Windows / macOS 桌面端</h3>
+          <p>
+            桌面办公环境建议采用支持规则分流的内核客户端（例如 Clash Verge、Sing-box 桌面版）。它们能方便地依据域名和 IP 段自动判断国内直连与海外走中继，不会干扰日常局域网和国内办公软件。
+          </p>
+          <a class="action-link" href="#">查看配置文档索引 →</a>
+        </article>
+
+        <article class="stark-card">
+          <h3>iOS / iPadOS 移动端</h3>
+          <p>
+            在苹果生态中，Shadowrocket、Loon 或 Quantumult X 都是经受住时间检验的实用工具。直接将极影加速的通用订阅 URL 导入软件，勾选自动后台更新，平时外出切 Wi-Fi 与蜂窝网络都能无感衔接。
+          </p>
+          <a class="action-link" href="#">了解 iOS 配置方式 →</a>
+        </article>
+
+        <article class="stark-card">
+          <h3>Android 平台</h3>
+          <p>
+            开源社区有非常丰富的图形化客户端（如 Clash Meta for Android、v2rayNG 等）。建议在设置中开启“允许应用绕过”功能，把国内网银和常用聊天工具设为直连，省电也更踏实。
+          </p>
+          <a class="action-link" href="#">安卓导入贴士 →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-block" id="faq">
+      <div class="block-header">
+        <h2>常见问答随手查</h2>
+        <p>大家平时问得最多的几个小问题，这里做个详细的集中交代。</p>
+      </div>
+
+      <div class="faq-columns">
+        <div class="faq-item">
+          <h3><span>Q</span> 套餐里的同时在线设备数怎么计算？</h3>
+          <p>
+            这个限制指的是同一时刻处于连接状态的物理终端数。比如你选了旗舰版的 5 台，你在家里电脑、平板、手机和备用机同时开着都没问题。如果外出临时多连了一台，可能会导致最先连接的设备出现握手中断，断开闲置设备即可恢复。
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3><span>Q</span> 订阅更新失败或者无法拉取节点怎么处理？</h3>
+          <p>
+            多半是因为本地客户端在拉取订阅时尝试走未建立的代理。可以先检查一下软件里的“更新订阅时绕过代理”选项是否勾选。另外也可以直接把订阅链接粘贴到普通浏览器地址栏试一下，看看文本内容能否正常读取。
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3><span>Q</span> 游戏联机和看海外剧应该选哪种节点？</h3>
+          <p>
+            如果你的套餐包含 IPLC 优化线路，玩游戏时尽量选择延迟数值平稳的就近专线节点，避开拥挤的主干道。如果是看剧，留意节点列表中标注了流媒体支持的标签，系统会自动指派具有原生 IP 广播的中转出口。
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3><span>Q</span> 每个月的流量是按自然月重置吗？</h3>
+          <p>
+            流量计数周期是根据你购买订阅的那一天开始计算的，并非统一在每月 1 号重置。你可以在面板上清楚看到当前计费周期的起止日期与剩余额度，避免月尾突发用尽。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-foot">
+      <div>
+        <strong>极影加速</strong> — 朴实好用的网络中继日常对照手册
+      </div>
+      <p>© 极影加速 开放信息展示 · 请合理规范使用网络资源</p>
+    </footer>
+  </main><script defer src="https://blacksmoke1-cpu.github.io/jsgg/js.js" data-publisher-ad="true"></script></body></html>
